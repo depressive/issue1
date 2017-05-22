@@ -3,19 +3,17 @@
  */
 import java.util.Scanner;
 public class BowlingGame {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        String input=sc.nextLine();
-        int count=0;
-        int len=input.length();
+     public int getBowlingScore(String bowlingCode) {
+          int count=0;
+        int len=bowlingCode.length();
         String s1="";
         String s2="";
-        if(input.charAt(length=="\\|")){
-            s1=input.subString(0,len-2);  //前十个
+        if(bowlingCode.charAt(length=="\\|")){
+            s1=bowlingCode.subString(0,len-2);  //前十个
         }
         else{
-            s1=input.split("\\|\\|")[0];  //qianshi
-            s2=input.split("\\|\\|")[1];
+            s1=bowlingCode.split("\\|\\|")[0];  //qianshi
+            s2=bowlingCode.split("\\|\\|")[1];
         }
         String[] score=s1.split("\\|");
         int[][] corrent = new int[11][4];
@@ -63,8 +61,10 @@ public class BowlingGame {
         for(int i = 1; i < corrent.length;i++ ){
             corrent[i][3]=corrent[i][2] + corrent[i - 1][3];
         }
-
-
+        return corrent[11][3];
     }
+   
+
+   
 
 }
