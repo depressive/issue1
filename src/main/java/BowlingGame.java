@@ -23,7 +23,7 @@ public class BowlingGame {
             for(int i=0;i<s2.length();i++)
                 corrent[11][i]=s2.charAt(j) - '0';
         }
-        for (int i = 0; i < 10; i++) {//循环11轮
+        for (int i = 0; i < 10; i++) {//循环10轮
             if (score[i] == "X") {
                 corrent[i][0] = 10;
                 corrent[i][1] = 10;
